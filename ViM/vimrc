@@ -268,3 +268,8 @@ function! MyUnSetCursor()
 	set nocursorline
 	set nocursorcolumn
 endfunction
+
+au! CursorHold * call MyUnSetCursor()
+au! CursorMoved * call MySetCursor()
+au! CursorMovedI * call MyUnSetCursor()
+
